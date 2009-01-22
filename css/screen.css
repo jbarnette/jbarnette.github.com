@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+}
+ 
+body {
+    background-color: #fff;
+    font: 14px helvetica, arial, sans-serif;
+}
+
+a {
+    color: #a00;
+}
+
+a:hover {
+    color: #000;
+}
+
+h1 {
+    font-size: 150%;
+    border-bottom: 3px solid black;
+    padding-bottom: 8px;
+}
+
+h2 {
+    margin-top: 24px;
+    font-size: 120%;
+    margin-bottom: 8px;
+}
+
+p {
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+#wrap {
+    width: 580px;
+    margin: 60px auto;
+}
+
+#header {
+    position: relative;
+}
+
+#header a, #footer a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+#header h1 a, #footer h1 a {
+    color: #000;
+}
+
+#header a:hover, #footer a:hover {
+    color: #a00;
+}
+
+#header .breadcrumb {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    font-weight: bold;
+}
+
+#content {
+    margin-top: 32px;
+}
+
+.posts {
+    list-style-type: none;
+}
+
+.slug {
+    color: #aaa;
+}
+
+#footer {
+    position: relative;
+    border-top: 3px solid black;
+    margin-top: 32px;
+    padding-top: 8px;
+}
+
+a.feed {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+
+.vcard {
+    font-size: 12px;
+    line-height: 20px;
+    color: #aaa;
+}
+
+.vcard .fn, .vcard .email {
+    display: none;
+}
+
+.presence {
+    font-size: 12px;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+#header .presence {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+}
+
+#footer .presence {
+    text-align: center;
+}
+
+.presence li {
+    display: inline;
+    border-left: 3px solid #eee;
+    padding: 0 8px;
+}
+
+.presence li:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.presence li:last-child {
+    padding-right: 0;
+}

@@ -4,19 +4,27 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <link rel="stylesheet" href="/css/screen.css" type="text/css" />
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} by John Barnette</title>
   </head>
 
   <body>
     <div id="wrap">
-      <div id="top"></div>
+      <div id="header">
+	<h1>{{page.title}}</h1>
+	<a class="breadcrumb" href="/">by John Barnette</a>
+      </div>
 
       <div id="content">
-	<h1>{{ page.title}}</h1>
-
 	{{ content }}
       </div>
 
-      <div id="footer"></div>
+      <div id="footer">
+	<ul class="presence">
+	  <li><a href="/about.html">about</a></li>
+	  <li><a href="mailto:jbarnette@gmail.com">email</a></li>
+	  <li><a href="http://twitter.com/jbarnette">twitter</a></li>
+	  <li><a href="http://github.com/jbarnette">github</a></li>
+	</ul>
+      </div>
   </body>
 </html>

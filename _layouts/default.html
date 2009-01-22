@@ -9,7 +9,16 @@
 
   <body>
     <div id="wrap">
-      <div id="top"></div>
+      <div id="header">
+	<h1><a href="/">John Barnette</a></h1>
+	
+	<ul class="presence">
+	  <li><a href="/about.html">about</a></li>
+	  <li><a href="mailto:jbarnette@gmail.com">email</a></li>
+	  <li><a href="http://twitter.com/jbarnette">twitter</a></li>
+	  <li><a href="http://github.com/jbarnette">github</a></li>
+	</ul>
+      </div>
 
       <div id="content">
 	{{ content }}
@@ -17,8 +26,8 @@
 
       <div id="footer">
 	<div id="hcard-John-Barnette" class="vcard">
-	  <a class="url fn" href="http://twitter.com/jbarnette">John Barnette</a>
-	  <a class="email" href="mailto:jbarnette@gmail.com">jbarnette@gmail.com</a>
+	  <span class="fn">John Barnette</span>
+	  <div class="email">jbarnette@gmail.com</div>
 
 	  <div class="adr">
 	    <div class="street-address">3658 Dayton Avenue N #302</div>
@@ -30,6 +39,10 @@
 
 	  <div class="tel">+1 206 724 2923</div>
 	</div>
+
+	<a class="feed" href="#">
+	  <img src="/images/feed.png" width="28" height="28" alt="Feed" />
+	</a>
       </div>
   </body>
 </html>
