@@ -1,7 +1,7 @@
-    ---
-    layout: post
-    title: Note to Self
-    ---
+---
+layout: post
+title: Note to Self
+---
 
 ## Be Confident
 
