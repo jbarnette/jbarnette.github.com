@@ -32,6 +32,10 @@ h2 {
     margin-bottom: 8px;
 }
 
+li {
+    line-height: 20px;
+}
+
 p {
     line-height: 20px;
     margin-bottom: 12px;
@@ -74,8 +78,37 @@ p {
     list-style-type: none;
 }
 
+.posts li {
+    display: inline-block;
+    width: 290px;
+}
+
+.posts li.right {
+    text-align: right;
+}
+
+.posts li.right a {
+    float: right;
+}
+
+.posts li.right a::outside {
+    content: "HELLO";
+}
+
 .slug {
     color: #aaa;
+}
+
+.left .slug::before {
+  content: "\2014  ";
+}
+
+.right .slug::after {
+  content: " \2014";
+}
+
+.right .slug {
+margin-right: 4px;
 }
 
 #footer {
