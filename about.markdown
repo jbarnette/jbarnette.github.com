@@ -8,7 +8,7 @@ I live in Seattle. I have a wife and a cat, but not necessarily in that order. I
 
 [Seattle.rb]: http://www.seattlerb.org
 
-## This Site
+## Colophon
 
 I lifted every good visual idea on these pages from [TPW][] or [Khoi Vinh][]. Underlying bits are [Jekyll][] and [Markdown][] on [GitHub Pages][].
 
