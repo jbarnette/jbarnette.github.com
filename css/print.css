@@ -1,0 +1,7 @@
+a.feed, ul.presence {
+    display: none;
+}
+
+* {
+    color: #000 !important;
+}
