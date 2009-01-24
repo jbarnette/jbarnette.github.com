@@ -32,6 +32,13 @@ h2 {
     margin-bottom: 8px;
 }
 
+h3 {
+    margin-top: 24px;
+    font-size: 110%;
+    margin-bottom: 8px;
+    color: #222;
+}
+
 li {
     line-height: 20px;
 }
@@ -39,6 +46,10 @@ li {
 p {
     line-height: 20px;
     margin-bottom: 12px;
+}
+
+ul {
+    list-style-type: square;
 }
 
 #wrap {
