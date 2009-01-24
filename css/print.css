@@ -23,3 +23,44 @@ h1 a:link::after,
 h1 a:visited::after {
     content: "";
 }
+
+.posts a:link::after,
+.posts a:visited::after {
+    display: block;
+    font-weight: normal;
+    font-size: 70%;
+    content: attr(href);
+}
+
+.posts li {
+    display: block;
+    width: 100%;
+}
+
+.posts li.right {
+    text-align: left;
+}
+
+.posts li.right a {
+    float: none;
+}
+
+.left .slug::before,
+.right .slug::after {
+  content: "";
+}
+
+.right .slug {
+    margin-right: 0;
+}
+
+.slug {
+    display: none;
+}
+
+.posts a {
+    margin-top: 12px;
+    font-size: 110%;
+    font-weight: bold;
+    display: block;
+}

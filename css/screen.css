@@ -102,10 +102,6 @@ ul {
     float: right;
 }
 
-.posts li.right a::outside {
-    content: "HELLO";
-}
-
 .slug {
     color: #aaa;
 }
