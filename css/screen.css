@@ -176,3 +176,7 @@ a.feed {
 .presence li:last-child {
     padding-right: 0;
 }
+
+.dsq-popupdiv, .dsq-auth, .dsq-options-toggle {
+    display: none;
+}
