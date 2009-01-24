@@ -17,8 +17,14 @@
 	{{ content }}
       </div>
 
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="http://disqus.com/forums/jbarnette/embed.js"></script>
+
       <div id="footer">
 	{% include presence.html %}
       </div>
+    </div>
 
-{% include analytics.html %}
+    {% include analytics.html %}
+  </body>
+</html>
