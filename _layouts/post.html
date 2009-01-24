@@ -2,15 +2,7 @@
 
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <link rel="stylesheet" href="/css/screen.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/print.css" type="text/css" media="print" />
-    <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen" />
-
-    <link href="http://feeds2.feedburner.com/jbarnette"
-	  rel="alternate" title="John Barnette"
-	  type="application/atom+xml" />
-
+    {% include head.html %}
     <title>&ldquo;{{ page.title }}&rdquo; by John Barnette</title>
   </head>
 
@@ -26,22 +18,7 @@
       </div>
 
       <div id="footer">
-	<ul class="presence">
-	  <li class="about"><a href="/about.html">about</a></li>
-	  <li class="email"><a href="mailto:jbarnette@gmail.com">email</a></li>
-	  <li><a href="http://twitter.com/jbarnette">twitter</a></li>
-	  <li><a href="http://github.com/jbarnette">github</a></li>
-	</ul>
+	{% include presence.html %}
       </div>
 
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-7122164-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-  </body>
-</html>
+{% include analytics.html %}
