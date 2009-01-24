@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Focusing Autotest
-comments: true
 ---
 
 Looking at [micronaut][m] made me realize that I often want to iterate

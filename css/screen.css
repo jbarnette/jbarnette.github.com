@@ -182,11 +182,3 @@ a.feed {
 .presence li:last-child {
     padding-right: 0;
 }
-
-#dsq-auth, #dsq-options-toggle, #dsq-comments-count {
-    display: none;
-}
-
-input.submit {
-    margin-top: 8px;
-}
