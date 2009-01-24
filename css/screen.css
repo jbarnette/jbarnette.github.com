@@ -48,6 +48,10 @@ p {
     margin-bottom: 12px;
 }
 
+pre {
+    margin: 24px 0;
+}
+
 ul {
     list-style-type: square;
 }
