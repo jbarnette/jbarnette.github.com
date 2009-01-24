@@ -5,3 +5,21 @@ a.feed, ul.presence {
 * {
     color: #000 !important;
 }
+
+.vcard .email {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link::after,
+a:visited::after {
+    content: " (" attr(href) ")";
+}
+
+h1 a:link::after,
+h1 a:visited::after {
+    content: "";
+}

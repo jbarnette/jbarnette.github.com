@@ -5,7 +5,7 @@ title: John Barnette
 
 ## Skills
 
-C, C++, Objective-C, Ruby, JavaScript, Java, C#, Erlang, Perl, SQL, HTML, CSS, XML, XSLT, XSD, JVM, CLR, Unix, Windows, Mac OS X, MySQL, PostgreSQL, Rails, JBoss, Cocoa, Git, Subversion, Perforce, CVS/RCS, Agile development, Technical project management.
+C, C++, Objective-C, Ruby, JavaScript, Java, C#, Erlang, Perl, SQL, HTML, CSS, XML, XSLT, XSD, JVM, CLR, Unix, Windows, Mac OS X, MySQL, PostgreSQL, Rails, JBoss, Cocoa, Git, Subversion, Perforce, CVS/RCS, agile development, technical project management.
 
 ## Jobs
 
@@ -57,7 +57,7 @@ tape/data storage libraries. Developed remote tape library control
 capabilities and user interface. Developed web management portal for
 information storage and library management.
 
-## Extracurricular
+## Extras
 
 I have a [software engineering blog](http://jbarnette.com). I
 contribute code to Rails, RubyGems, Rubinius, and lots of other

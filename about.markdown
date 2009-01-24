@@ -3,6 +3,11 @@ layout: default
 title: About
 ---
 
+<style>
+li.about { display:none; }
+li.email { border-left: 0; }
+</style>
+
 ## About Me
 
 I live in Seattle. I have a cat and a wife, but not necessarily in that order. I hack on lots of stuff, often with [Seattle.rb][]. I don't get a lot of sleep. I have a history of abandoning blogs.
