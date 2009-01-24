@@ -89,6 +89,12 @@ ul {
     margin-top: 32px;
 }
 
+h2.comments {
+    padding-bottom: 8px;
+    border-bottom: 3px solid #999;
+    margin-bottom: 32px;
+}
+
 .posts {
     list-style-type: none;
 }
@@ -177,6 +183,6 @@ a.feed {
     padding-right: 0;
 }
 
-#dsq-auth, #dsq-options-toggle {
+#dsq-auth, #dsq-options-toggle, #dsq-comments-count {
     display: none;
 }
