@@ -177,6 +177,6 @@ a.feed {
     padding-right: 0;
 }
 
-.dsq-popupdiv, .dsq-auth, .dsq-options-toggle {
+#dsq-auth, #dsq-options-toggle {
     display: none;
 }
