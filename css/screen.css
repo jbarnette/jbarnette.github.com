@@ -187,6 +187,6 @@ a.feed {
     display: none;
 }
 
-.default-submit {
+#default-submit {
     margin-top: 8px;
 }
