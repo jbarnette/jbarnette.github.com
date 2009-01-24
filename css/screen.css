@@ -186,3 +186,7 @@ a.feed {
 #dsq-auth, #dsq-options-toggle, #dsq-comments-count {
     display: none;
 }
+
+.default-submit {
+    margin-top: 8px;
+}
