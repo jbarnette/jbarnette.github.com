@@ -5,7 +5,7 @@ title: About
 
 <style>
 li.about { display:none; }
-li.email { border-left: 0; }
+li.toys { border-left: 0; }
 </style>
 
 ## About Me
