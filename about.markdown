@@ -10,15 +10,21 @@ li.toys { border-left: 0; }
 
 ## About Me
 
-I live in Seattle. I have a cat and a wife, but not necessarily in that order. I hack on lots of stuff, often with [Seattle.rb][]. I work for [AdReady][]. I don't get a lot of sleep. I have a history of abandoning blogs. If you're security-conscious, I have a [public key][].
+I live in Seattle. I have a cat and a wife, but not necessarily in
+that order. I hack on lots of stuff, often with [Seattle.rb][s.rb]. I
+work for [AT&T Interactive][atti]. I don't get a lot of sleep. I have
+a history of abandoning blogs. If you're security-conscious, I have a
+[public key][pgp].
 
-[Seattle.rb]: http://www.seattlerb.org
-[AdReady]: http://www.adready.com
-[public key]: /personal/jbarnette.txt
+[s.rb]: http://seattlerb.org
+[atti]: http://attinteractive.com
+ [pgp]: /personal/jbarnette.txt
 
 ## Colophon
 
-I lifted every good visual idea on these pages from [TPW][] or [Khoi Vinh][]. Underlying bits are [Jekyll][] and [Markdown][] on [GitHub Pages][].
+I lifted every good visual idea on these pages from [TPW][] or [Khoi
+Vinh][]. Underlying bits are [Jekyll][] and [Markdown][] on [GitHub
+Pages][].
 
 [TPW]:          http://github.com/mojombo
 [Khoi Vinh]:    http://www.subtraction.com
