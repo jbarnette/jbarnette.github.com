@@ -1,0 +1,159 @@
+---
+layout: post
+title: Versioning HTTP APIs
+---
+
+There's a lot of hot air circulating online re versioning RESTful
+APIs. I ignore most of it: It's folks without real load or customers,
+wanking about purity and "real" RESTful design.
+
+I actually agree with a fair amount of the purist noise from a
+theoretical perspective, but in practice the implementations are
+annoying enough that they're simply not worth the effort.
+
+These suggestions apply to *external* APIs: If you control all the
+endpoints, or if you're running a service where folks are more
+accepting of rapid change, you don't need to worry nearly as much.
+
+These also apply only to systems where there are lots of clients and a
+*single* service endpoint. The landscape changes a bit if clients are
+hitting multiple, independent installations of your service.
+
+My rules of thumb for versioning a RESTish API:
+
+## Do Your Best To Never, Ever, Break Compatibility
+
+You don't need new versions if you don't break client compatibility!
+Don't make casual changes to the API. Remember your consumers.
+
+1. Don't change resource URLs without a damn good reason.
+2. Don't let attribute/parameter positions matter.
+3. Accept and ignore unknown attributes/parameters.
+
+If you follow these guidelines, there's no reason to break major API
+compatibility when you add new resources, parameters, or attributes.
+
+## Admit That You're Going to Break Compatibility
+
+Nobody's perfect. It's gonna happen. Acknowledge it from the
+beginning, and design your URL scheme accordingly:
+
+    http;//example.com/api/v1/widgets.json
+    http://example.com/api/v2/widgets.json
+
+Many REST folks object to this sort of namespace segmentation, because
+a resource should only have one identifier. That makes a lot of
+sense, but the implementation difficulties outweigh the benefits. It's
+a lot easier to route completely separate namespaces than it is to
+differentiate on content-type or any of the other, more "proper"
+solutions.
+
+## Pick Sunsets and Stick To Them
+
+How many API versions are you going to support? For how long? Be
+firm. In most cases, I don't see a need to support more than two
+versions of an API simultaneously.
+
+Be helpful when you EOL an API version. Have any requests to the old
+namespace return helpful error codes and messages, or permanent
+redirects to the new API.
+
+Be aggressive about communicating with your API consumers. Don't let
+them get caught by surprise when an API version goes away.
+
+## Write Documentation as You Go
+
+Most APIs start as an internal tool, and then get exposed to the world
+later. Most internal tools are very lightly documented. Don't do that:
+If it's an interface, *even if it's currently only used internally*,
+document it as if it's intended for a wider audience. If you document
+incrementally, the burden is very low.
+
+## Write Really Damn Good Integration Tests
+
+Keep your coverage high. Don't ever change tests, except to fix a test
+bug. You can *add* to them, but if you're changing them you've
+probably broken compatibility. When you have to break compatibility,
+*copy* the current tests, document the difference in the test and the
+documentation, and alter them for the new version.
+
+## Ship a Service Client
+
+Along with good service documentation, ship at least one client
+implementation of your API. If it's good, clean, well-tested, and
+well-documented, folks will use it as a guide when they port to their
+preferred language/environment/framework.
+
+Design your API via working tests and it will wind up more usable in
+the long run. Implement the client implementation from those tests and
+they won't get out of sync.
+
+## Separate API from UI
+
+If you're developing in a framework like Rails, avoid the temptation
+to mix your API and your UI controllers. Work hard to keep them
+separated. If there's enough logic in your UI controllers that it's
+hard to break out the API bits, your controllers are too
+fat. Refactor.
+
+## A Quick (Rails) Example
+
+Here's how I might implement a small RESTish API. We'll start with a
+single resource -- a widget -- and build from there.
+
+
+    # Api::V1::WidgetsController
+    controllers/api/v1/widgets_controller.rb
+
+    # Api::V1::WidgetsControllerTest
+    test/functional/api/v1/widgets_controller_test.rb
+
+    # Api::V1::WidgetsTest
+    test/integration/api/v1/widgets_test.rb
+
+{% highlight ruby %}
+# in routes.rb
+map.namespace :api do |api|
+  map.namespace :v1 do |v1|
+    v1.resources :widgets
+  end
+end
+{% endhighlight %}
+
+### Adding an Attribute to the Widget Model
+
+No new version is necessary: just add it. Document clearly that
+clients, like the server, should ignore unknown attributes.
+
+### Adding a New Resource
+
+No new version is necessary: just add it. If the clients don't know
+about a resource, they don't need to care. See the next section if
+you're adding a relationship to an existing resource: The same
+restrictions apply.
+
+### Renaming an Attribute on the Widget Model
+
+Okay, so this is a breaking change. Time for v2!
+
+    $ cp -r app/controllers/api/v1 app/controllers/api/v2
+    $ cp -r test/functional/api/v1 test/functional/api/v2
+    $ cp -r test/integration/api/v1 test/integration/api/v2
+    $ cp -r doc/api/v1 doc/api/v2
+
+Use the method of your choice to change all references under the new
+paths from "V1" to "V2".
+
+Don't forget to copy your routes to a new v2 namespace. Once you've
+done all this for the first time, write a Rake task to do it for
+you. For extra points, write a task that removes an older API version
+and make the generation task complain if you're trying to support too
+many version simultaneously.
+
+Add your breaking features, change the new v2 tests, update the docs
+and your client reference implementation, and get on with your life.
+
+When the new version goes live, it's time to start communicating
+with your consumers about when the old version is going away.
+
+*(Thanks to Ryan Davis and Aaron Patterson for arguing with me about this.)*
