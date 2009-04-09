@@ -3,13 +3,15 @@ layout: post
 title: Versioning HTTP APIs
 ---
 
+*(This is a draft in progress. Don't get too riled up yet.)*
+
 There's a lot of hot air circulating online re versioning RESTful
 APIs. I ignore most of it: It's folks without real load or customers,
 wanking about purity and "real" RESTful design.
 
-I actually agree with a fair amount of the purist noise from a
-theoretical perspective, but in practice the implementations are
-annoying enough that they're simply not worth the effort.
+I actually agree with some of the purist noise from a theoretical
+perspective, but in practice the implementations are annoying enough
+that they're simply not worth the effort.
 
 These suggestions apply to *external* APIs: If you control all the
 endpoints, or if you're running a service where folks are more
@@ -38,7 +40,7 @@ compatibility when you add new resources, parameters, or attributes.
 Nobody's perfect. It's gonna happen. Acknowledge it from the
 beginning, and design your URL scheme accordingly:
 
-    http;//example.com/api/v1/widgets.json
+    http://example.com/api/v1/widgets.json
     http://example.com/api/v2/widgets.json
 
 Many REST folks object to this sort of namespace segmentation, because
@@ -54,7 +56,7 @@ How many API versions are you going to support? For how long? Be
 firm. In most cases, I don't see a need to support more than two
 versions of an API simultaneously.
 
-Be helpful when you EOL an API version. Have any requests to the old
+Be helpful when you kill an API version. Have any requests to the old
 namespace return helpful error codes and messages, or permanent
 redirects to the new API.
 
@@ -155,5 +157,3 @@ and your client reference implementation, and get on with your life.
 
 When the new version goes live, it's time to start communicating
 with your consumers about when the old version is going away.
-
-*(Thanks to Ryan Davis and Aaron Patterson for arguing with me about this.)*
