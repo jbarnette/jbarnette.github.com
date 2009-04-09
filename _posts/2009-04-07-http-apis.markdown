@@ -88,7 +88,8 @@ preferred language/environment/framework.
 
 Design your API via working tests and it will wind up more usable in
 the long run. Implement the client implementation from those tests and
-they won't get out of sync.
+they won't get out of sync. If it's possible, have different people
+implement the server and the client.
 
 ## Separate API from UI
 
