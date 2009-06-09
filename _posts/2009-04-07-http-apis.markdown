@@ -117,7 +117,7 @@ single resource -- a widget -- and build from there.
 {% highlight ruby %}
 # in routes.rb
 map.namespace :api do |api|
-  map.namespace :v1 do |v1|
+  api.namespace :v1 do |v1|
     v1.resources :widgets
   end
 end
