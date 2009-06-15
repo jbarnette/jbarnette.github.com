@@ -45,3 +45,5 @@ end
 
 ...and remove the focus when I'm ready to zoom out. Awesome. Sprinkle
 on some editor support and it'll be *epic*.
+
+*(2009-03-27: This is available in the latest ZenTest.)*
