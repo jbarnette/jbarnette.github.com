@@ -175,6 +175,7 @@ a.feed {
 
 #footer .presence {
     text-align: center;
+    margin: 0;
 }
 
 .presence li {
