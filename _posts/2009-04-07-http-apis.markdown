@@ -3,11 +3,9 @@ layout: post
 title: Versioning HTTP APIs
 ---
 
-*(This is a draft in progress. Don't get too riled up yet.)*
-
-There's a lot of hot air circulating online re versioning RESTful
-APIs. I ignore most of it: It's folks without real load or customers,
-wanking about purity and "real" RESTful design.
+There's a lot of hot air circulating online re versioning HTTP APIs. I
+ignore most of it: It's RESTy folks without real load or customers,
+wanking about purity.
 
 I actually agree with some of the purist noise from a theoretical
 perspective, but in practice the implementations are annoying enough
@@ -21,7 +19,7 @@ These also apply only to systems where there are lots of clients and a
 *single* service endpoint. The landscape changes a bit if clients are
 hitting multiple, independent installations of your service.
 
-My rules of thumb for versioning a RESTish API:
+My rules of thumb for versioning an HTTP API:
 
 ## Do Your Best To Never, Ever, Break Compatibility
 
@@ -43,22 +41,22 @@ beginning, and design your URL scheme accordingly:
     http://example.com/api/v1/widgets.json
     http://example.com/api/v2/widgets.json
 
-Many REST folks object to this sort of namespace segmentation, because
-a resource should only have one identifier. That makes a lot of
-sense, but the implementation difficulties outweigh the benefits. It's
-a lot easier to route completely separate namespaces than it is to
-differentiate on content-type or any of the other, more "proper"
-solutions.
+Many RESTy folks object to this sort of namespace segmentation,
+because a resource should only have one identifier. That makes a lot
+of sense, but the implementation difficulties outweigh the
+benefits. It's a lot easier to route completely separate namespaces
+than it is to use content negotiation or any of the other "more
+proper" solutions.
 
 ## Pick Sunsets and Stick To Them
 
 How many API versions are you going to support? For how long? Be
-firm. In most cases, I don't see a need to support more than two
+firm. I haven't generally seen a need to support more than two
 versions of an API simultaneously.
 
 Be helpful when you kill an API version. Have any requests to the old
-namespace return helpful error codes and messages, or permanent
-redirects to the new API.
+namespace return good error codes and messages (or permanent redirects
+to the new API).
 
 Be aggressive about communicating with your API consumers. Don't let
 them get caught by surprise when an API version goes away.
@@ -66,7 +64,7 @@ them get caught by surprise when an API version goes away.
 ## Write Documentation as You Go
 
 Most APIs start as an internal tool, and then get exposed to the world
-later. Most internal tools are very lightly documented. Don't do that:
+later. Most internal tools are very lightly documented. Don't do that!
 If it's an interface, *even if it's currently only used internally*,
 document it as if it's intended for a wider audience. If you document
 incrementally, the burden is very low.
@@ -81,15 +79,14 @@ documentation, and alter them for the new version.
 
 ## Ship a Service Client
 
-Along with good service documentation, ship at least one client
+Along with good service documentation, try to ship at least one client
 implementation of your API. If it's good, clean, well-tested, and
 well-documented, folks will use it as a guide when they port to their
-preferred language/environment/framework.
+preferred environment.
 
-Design your API via working tests and it will wind up more usable in
-the long run. Implement the client implementation from those tests and
-they won't get out of sync. If it's possible, have different people
-implement the server and the client.
+Design your API via working tests and it'll be more usable in the long
+run. If it's possible, have different people implement the server and
+the client.
 
 ## Separate API from UI
 
@@ -101,7 +98,7 @@ fat. Refactor.
 
 ## A Quick (Rails) Example
 
-Here's how I might implement a small RESTish API. We'll start with a
+Here's how I might implement a (very) small API. We'll start with a
 single resource -- a widget -- and build from there.
 
 
@@ -125,8 +122,9 @@ end
 
 ### Adding an Attribute to the Widget Model
 
-No new version is necessary: just add it. Document clearly that
-clients, like the server, should ignore unknown attributes.
+No new version is necessary: just add it. Don't forget to change the
+docs! Remember to clearly document that clients, like the server,
+should ignore unknown attributes.
 
 ### Adding a New Resource
 
