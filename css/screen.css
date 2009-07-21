@@ -164,6 +164,7 @@ a.feed {
     font-size: 12px;
     font-weight: bold;
     list-style-type: none;
+    margin-bottom: 0;
 }
 
 #header .presence {
@@ -174,6 +175,7 @@ a.feed {
 
 #footer .presence {
     text-align: center;
+    margin: 0;
 }
 
 .presence li {
