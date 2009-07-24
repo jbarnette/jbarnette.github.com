@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Versioning HTTP APIs
+updated: 2009-07-21
 ---
 
 There's a lot of hot air circulating online re versioning HTTP APIs. I
