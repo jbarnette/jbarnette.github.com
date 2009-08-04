@@ -75,4 +75,3 @@ projects. I keep all my own open source work on
 [GitHub](http://github.com/jbarnette). I've presented at
 [RubyConf](http://rubyconf.org), and I'm an active member of
 [Seattle.rb](http://seattlerb.org).
-
