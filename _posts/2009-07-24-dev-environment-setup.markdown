@@ -17,6 +17,7 @@ installed.
 ## Fundamental Stuff
 
 * [1Password][1p]. It knows all.
+* [Dropbox][db]. Sync folders transparently.
 * [Emacs][em]. I'm building [Emacs 23 from source][es].
 * [Inconsolata][in]. My favorite programming font.
 * [LaunchBar][lb]. Useless without it.
@@ -26,7 +27,6 @@ installed.
 ## Important Stuff
 
 * [Adium][ad]. I like talking on the digital internets.
-* [Dropbox][db]. Sync folders transparently.
 * [FireFox][ff]. I use Safari for daily browsing, but FF for lots of dev.
 * [Growl][gr]. I turn off most notifications, but it's still good to have.
 * [Mail Unread Menu][mu]. Since I hide the dock and mute everything.
