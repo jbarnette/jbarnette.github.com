@@ -5,11 +5,21 @@ title: John Barnette
 
 ## Skills
 
-C, C++, Objective-C, Ruby, JavaScript, Java, C#, Erlang, Perl, SQL, HTML, CSS, XML, XSLT, XSD, JVM, CLR, Unix, Windows, Mac OS X, MySQL, PostgreSQL, Rails, JBoss, Cocoa, Git, Subversion, Perforce, CVS/RCS, agile development, technical project management.
+C, C++, Objective-C, Ruby, JavaScript, Java, C#, Erlang, Perl, SQL,
+HTML, CSS, XML, XSLT, XSD, JVM, CLR, Unix, Windows, Mac OS X, MySQL,
+PostgreSQL, Rails, JBoss, Cocoa, Git, Subversion, Perforce, CVS/RCS,
+agile development, technical project management.
 
 ## Jobs
 
-### 2007 &mdash; Now: Lead Software Engineer, AdReady
+### 2009 &mdash; Now: Lead Software Engineer, AT&T Interactive
+
+Working directly for the Executive Director of Web Development with a
+small team of Ruby/Rails experts (Aaron Patterson, Ryan Davis, Eric
+Hodel). Spending a lot of time helping ATTi solidify coding standards,
+deployment processes, and general software quality.
+
+### 2007 &mdash; 2009: Lead Software Engineer, AdReady
 
 Lead software engineer on a large Rails app, shepherded from 1.x to
 2.x. Extracted a fair amount of work into open source projects,
