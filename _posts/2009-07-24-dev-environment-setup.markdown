@@ -29,6 +29,7 @@ installed.
 * [Adium][ad]. I like talking on the digital internets.
 * [FireFox][ff]. I use Safari for daily browsing, but FF for lots of dev.
 * [Growl][gr]. I turn off most notifications, but it's still good to have.
+* [Mail Act-On][ma]. Effortless filing in Mail.app.
 * [Mail Unread Menu][mu]. Since I hide the dock and mute everything.
 * [Parallels][pa]. Only for testing stuff on Windows.
 * [Shimo][sh]. VPNs are dumb, but Shimo is pretty.
@@ -86,6 +87,7 @@ Add `/opt/local/lib/mysql5/bin` to your path, and this should work:
 [gr]: http://growl.info
 [in]: http://www.levien.com/type/myfonts/inconsolata.html
 [lb]: http://www.obdev.at/products/launchbar/index.html
+[ma]: http://www.indev.ca/MailActOn.html
 [mp]: http://www.macports.org
 [mu]: http://www.loganrockmore.com/MailUnreadMenu
 [pa]: http://www.parallels.com
