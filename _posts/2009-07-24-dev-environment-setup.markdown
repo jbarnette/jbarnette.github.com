@@ -18,7 +18,7 @@ installed.
 
 * [1Password][1p]. It knows all.
 * [Dropbox][db]. Sync folders transparently.
-* [Emacs][em]. I'm building [Emacs 23 from source][es].
+* [Emacs][em]. I'm building [Emacs 23 via MacPorts][es].
 * [Inconsolata][in]. My favorite programming font.
 * [LaunchBar][lb]. Useless without it.
 * [MacPorts][mp]. I use this to manage as much dev stuff as I can.
@@ -80,7 +80,7 @@ Add `/opt/local/lib/mysql5/bin` to your path, and this should work:
 [db]: https://www.getdropbox.com
 [df]: http://github.com/jbarnette/dotfiles
 [em]: http://www.gnu.org/software/emacs
-[es]: http://www.emacswiki.org/emacs/EmacsOnMacOS#toc2
+[es]: http://github.com/jbarnette/ports
 [fc]: http://www.objectpark.org/FuzzyClock.html
 [ff]: http://getfirefox.com
 [gn]: http://wiki.github.com/Caged/gitnub
