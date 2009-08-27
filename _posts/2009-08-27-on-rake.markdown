@@ -57,7 +57,7 @@ end
 This says essentially the same thing. `file` declarations in Rake
 behave just like tasks -- they can have prerequisites, be
 dependencies, and be invoked via `rake` -- but they only run if the
-target doesn't exist or the prerequisites are newer the target.
+target doesn't exist or the prerequisites are newer than the target.
 
 There's also a shortcut for creating directories:
 
@@ -85,11 +85,6 @@ $ rake foo.html
 
 Yay! Again, this will only run when the dependencies are unresolved,
 that is, if the target is missing or the source is newer.
-
-For a more detailed explanation of `directory`, `file`, and `rule`,
-take a look at [the Rake documentation][rake].
-
-[rake]: http://docs.rubyrake.org/user_guide/chapter03.html
 
 ## Picking Nits
 
@@ -133,3 +128,10 @@ end
 `invoke` uses the same rules as normal Rake execution: If the task has
 run already, it won't run again. `execute` runs the task no matter
 what. Make sure you know which one you want.
+
+## Fin
+
+For a more detailed explanation of `directory`, `file`, and `rule`,
+take a look at [the Rake documentation][rake].
+
+[rake]: http://docs.rubyrake.org/user_guide/chapter03.html
