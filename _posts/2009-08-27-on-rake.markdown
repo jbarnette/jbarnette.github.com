@@ -1,0 +1,135 @@
+---
+layout: post
+title: On Rake
+---
+
+I've been reading a lot of Rakefiles lately, and it's obvious that the
+folks writing them think of Rake as An Engine For Encapsulating
+Tasks. That's fine, but it's only part of what Rake can do.
+
+## I Do Declare
+
+Rake is all about *resolving dependencies*. It's about being
+declarative, not imperative. Especially when dealing with files and
+directories, this can make a huge difference. Here's an example of a
+imperative task:
+
+{%highlight ruby%}
+desc "Make sure your database.yml is in place"
+task :wheres_your_database_yml do
+  unless File.exists? File.join("config", "database.yml")
+    puts "Where's your database.yml, dude?"
+    if File.exist? File.join("config", "database.yml.example")
+      puts "(elided)... so I'll make a copy of it for you."
+
+      cp File.join("config", "database.yml.example"),
+        File.join("config", "database.yml")
+
+        abort "(elided)...rerun the last command."
+    else
+      abort "(elided)...There's no config/database.yml.example..."
+    end
+  end
+end
+{%endhighlight%}
+
+(This is from [technicalpickles' dude-wheres-your-database-yml][dude],
+a nice little Rails plugin for automatically installing a
+`database.yml` file the first time a new contributor runs Rake. I've
+shortened a few of the messages, but that's it.)
+
+[dude]: http://github.com/technicalpickles/wheres-your-database-yml-dude
+
+This says, "Hey, if there's not a `config/database.yml` file, create
+it by copying `config/database.yml.example`. If THAT doesn't exist,
+complain."
+
+Here's how to write this in a more declarative way:
+
+{%highlight ruby%}
+file "config/database.yml" => "config/database.yml.example" do |t|
+  sh "cp #{t.prerequisites.first} #{t.name}"
+end
+{%endhighlight%}
+
+(This doesn't abort or talk to the user, but you get the idea.)
+
+This says essentially the same thing. `file` declarations in Rake
+behave just like tasks -- they can have prerequisites, be
+dependencies, and be invoked via `rake` -- but they only run if the
+target doesn't exist or the prerequisites are newer the target.
+
+There's also a shortcut for creating directories:
+
+{%highlight ruby%}
+directory "foo"
+
+# ...is the same as:
+file("foo") { |t| mkdir t.name  }
+{%endhighlight%}
+
+It's also possible to declare a transformation for a *set* of files,
+not just a single file. Let's say that you have a directory of
+Markdown files, and you want to be able to transform any of 'em into
+HTML. Easy:
+
+{%highlight ruby%}
+rule ".html" => ".markdown" do |t|
+  sh "markdown #{t.source} > #{t.name}"
+end
+
+# in your shell
+$ rake foo.html
+
+{%endhighlight%}
+
+Yay! Again, this will only run when the dependencies are unresolved,
+that is, if the target is missing or the source is newer.
+
+For a more detailed explanation of `directory`, `file`, and `rule`,
+take a look at [the Rake documentation][rake].
+
+[rake]: http://docs.rubyrake.org/user_guide/chapter03.html
+
+## Picking Nits
+
+A grab-bag of other bad usage I've seen recently:
+
+### Prerequisites
+
+{%highlight ruby %}
+task :mystuff do
+  # ...
+end
+
+task :something => :mystuff
+{%endhighlight%}
+
+This isn't necessary. Unless you want to be able to use your `mystuff`
+task independently, just define `something` again:
+
+{%highlight ruby%}
+task :something do
+  # my stuff...
+end
+{%endhighlight%}
+
+"Redefining" an existing task in Rake *appends* the new actions (and
+prerequisites) to the original. Don't add new tasks unless you
+actually need them.
+
+### Explicit Invocation
+
+Sometimes it's necessary to run Rake tasks imperatively. That's
+fine. Run them with `invoke`, not with `execute`:
+
+{%highlight ruby%}
+task :mine do
+  # some setup stuff
+  Rake::Task["theirstuff"].invoke
+end
+{%endhighlight%}
+
+`invoke` uses the same rules as normal Rake execution: If the task has
+run already, it won't run again. `execute` runs the task no matter
+what. Make sure you know which one you want.
