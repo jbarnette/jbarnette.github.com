@@ -3,6 +3,8 @@ layout: post
 title: Boring Things First
 ---
 
+*[This is a draft.]*
+
 Yeah, yeah. You're agile. You *always* test first, you work in tight
 iterations, you have YAGNI tattooed on your forehead. Good for
 you. Guess what? You're building on sand. Do this stuff first:
@@ -43,7 +45,7 @@ Codes Are Perfect, someone's code that you *depend* on is
 shit. Integrate error reporting at the very beginning, before any
 users have a chance to make errors. For Rails apps, I use
 [Hoptoad]. There are a billion other alternatives, and rolling your
-own is easy as well.
+own is easy too.
 
 [hoptoad]: http://www.hoptoadapp.com
 
@@ -55,7 +57,7 @@ the answer is much more complicated than "check out the code and read
 the README," you suck.
 
 Start documenting at the very beginning. What should someone run to
-get started in a fresh checkout (I like `rake newb`)? How does
+get started in a fresh checkout? (I like `rake newb`) How does
 deployment work? Where's the deployment server? How was it configured?
 How do I stand up another one from scratch? What external services
 (issue tracking, error reporting) does this app use?
