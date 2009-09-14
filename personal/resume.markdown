@@ -15,9 +15,9 @@ agile development, technical project management.
 ### 2009 &mdash; Now: Lead Software Engineer, AT&T Interactive
 
 Working directly for the Executive Director of Web Development with a
-small team of Ruby/Rails experts (Aaron Patterson, Ryan Davis, Eric
-Hodel). Spending a lot of time helping ATTi solidify coding standards,
-deployment processes, and general software quality.
+small team of Ruby/Rails experts. Spending a lot of time helping ATTi
+solidify coding standards, deployment processes, and general software
+quality.
 
 ### 2007 &mdash; 2009: Lead Software Engineer, AdReady
 
