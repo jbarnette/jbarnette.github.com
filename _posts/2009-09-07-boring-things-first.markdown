@@ -3,7 +3,7 @@ layout: post
 title: Boring Things First
 ---
 
-*[This is a draft.]*
+*This is a draft.*
 
 Yeah, yeah. You're agile. You *always* test first, you work in tight
 iterations, you have YAGNI tattooed on your forehead. Good for
