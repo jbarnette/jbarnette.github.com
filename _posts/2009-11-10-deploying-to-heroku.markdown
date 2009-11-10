@@ -5,7 +5,7 @@ title: Deploying to Heroku
 
 Deploying to Heroku with `git push` is awesome. I'm running a couple
 of different environments, though, and there's extra stuff that I want
-to do when I deploy.
+to do when I deploy. Rake to the rescue!
 
 ## Some Assumptions
 
@@ -15,7 +15,7 @@ well, what's next (you probably call it "staging"). There are local
 tracking branches for each of these, natch.
 
 New features happen in topic branches, and they're merged into `next`
-when they're ready. Emergencies and bug fixes are similar, but they'll
+when they're ready. Emergencies and bug fixes are similar, but they
 also get merged into `master` and deployed before `next` is fully
 baked.
 
@@ -23,8 +23,8 @@ baked.
 periodic merges of `next`. If `git merge next` isn't a fast-forward,
 something's probably wrong.
 
-There are (at the moment) two Heroku environments, `app-next` and
-`app-production`. There's a Git remote for each environment:
+There are (at the moment) two Heroku environments, `myapp-next` and
+`myapp-production`. There's a Git remote for each environment:
 
     $ git remote
     next
