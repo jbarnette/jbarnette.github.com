@@ -5,8 +5,8 @@ title: Isolate on Heroku
 
 Quite a few people have asked about using [Isolate][src] on
 Heroku. There's no built-in support for Isolate in Heroku's current
-deployment tools (hey, a guy can dream), but it's pretty easy to hack
-together using Heroku's support for a `.gems` manifest file.
+deployment tools, but it's pretty easy to hack together using Heroku's
+support for a `.gems` manifest file.
 
 [src]: http://github.com/jbarnette/isolate
 
@@ -60,7 +60,7 @@ task :dotgems => %w(Isolate lib/tasks/isolate.rake) do
 end
 {% endhighlight %}
 
-This task looks at all my isolated gem entries, picks the ones that
+This task looks at all your isolated gem entries, picks the ones that
 are valid for production, and writes each of them to the `.gems`
 file. It also adds Isolate itself as a dependency. If `.gems` has
 changed, the task aborts and reminds you to commit the changes.
