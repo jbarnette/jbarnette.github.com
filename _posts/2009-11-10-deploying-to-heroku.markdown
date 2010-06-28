@@ -24,12 +24,12 @@ periodic merges of `next`. If `git merge next` isn't a fast-forward,
 something's probably wrong.
 
 There are (at the moment) two Heroku environments, `myapp-next` and
-`myapp-production`. There's a Git remote for each environment:
+`myapp-master`. There's a Git remote for each environment:
 
     $ git remote
-    next
+    heroku-next
     origin
-    production
+    heroku-master
 
 Got it? Good.
 
@@ -39,14 +39,13 @@ Got it? Good.
 
 *Super* complicated. In my setup, this task...
 
-* regenerates a Heroku `.gems` file and complains if it's out-of-date,
-* complains if I'm trying to deploy from a branch that doesn't match
+* Complains if I'm trying to deploy from a branch that doesn't match
   an deployment env (deploys can only happen from `master` and `next`),
 * sets the `TO` environment variable for Hoptoad,
 * shows a list of all the changes since the last deploy, and how long
   it's been,
 * pushes the current branch to the matching remote, e.g., `git push
-  next next/master`,
+  heroku-next next:master`,
 * tells Hoptoad about the deploy, and
 * sends a fancy email w/changes to the deployment mailing list.
 
