@@ -3,6 +3,11 @@ layout: post
 title: Isolate on Heroku
 ---
 
+**Update**: Jamie Macey wrote a [gem][] for this, and we improved the
+logic a bit. Use it.
+
+[gem]: http://github.com/jamie/isolate-heroku
+
 Quite a few people have asked about using [Isolate][src] on
 Heroku. There's no built-in support for Isolate in Heroku's current
 deployment tools, but it's pretty easy to hack together using Heroku's
