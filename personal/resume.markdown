@@ -5,14 +5,13 @@ title: John Barnette
 
 ## Skills
 
-C, C++, Objective-C, Ruby, JavaScript, Java, C#, Erlang, Perl, SQL,
-HTML, CSS, XML, XSLT, XSD, JVM, CLR, Unix, Windows, Mac OS X, MySQL,
-PostgreSQL, Rails, JBoss, Cocoa, Git, Subversion, Perforce, CVS/RCS,
-agile development, technical project management.
+Strategy, System design, technical project management.
 
 ## Jobs
 
-### 2009 &mdash; Now: Lead Software Engineer, AT&T Interactive
+### 2009 &mdash; Now: CTO, Audiosocket
+
+### 2009: Lead Software Engineer, AT&T Interactive
 
 Working directly for the Executive Director of Web Development with a
 small team of Ruby/Rails experts. Spending a lot of time helping ATTi
