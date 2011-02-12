@@ -3,6 +3,9 @@ layout: post
 title: Environment Setup
 ---
 
+**Note**: I'm rereading this in the first quarter of 2011 and it's
+pretty obsolete. I'll update it at some point.
+
 I've had scattered notes on setting up a new development computer from
 scratch in Backpack for years now. Hopefully collecting them here will
 make it more likely that they'll stay up-to-date. This is *my*
