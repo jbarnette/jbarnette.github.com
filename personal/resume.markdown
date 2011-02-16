@@ -5,7 +5,7 @@ title: John Barnette
 
 ## Skills
 
-Strategy, System design, technical project management.
+Software design, strategy, technical project management.
 
 ## Jobs
 
