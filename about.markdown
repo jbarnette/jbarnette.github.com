@@ -10,7 +10,7 @@ li.toys { border-left: 0; }
 
 ## About Me
 
-I live in Seattle. I have a cat and a wife, but not necessarily in
+I live in New Orleans. I have a cat and a wife, but not necessarily in
 that order. I hack on lots of stuff, often with [Seattle.rb][s.rb].  I
 play CTO at [Audiosocket][socket]. I don't get a lot of sleep. I have
 a history of abandoning blogs. If you're paranoid, I have a [public
