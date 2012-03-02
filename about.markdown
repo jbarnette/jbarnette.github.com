@@ -10,12 +10,13 @@ li.toys { border-left: 0; }
 
 ## About Me
 
-I live in New Orleans. I have a cat and a wife, but not necessarily in
-that order. I hack on lots of stuff, often with [Seattle.rb][s.rb].  I
-play CTO at [Audiosocket][socket]. I co-founded Shady Ventures. I
-don't get a lot of sleep. I have a history of abandoning blogs. If
-you're paranoid, I have a [public key][pgp].
+I live in New Orleans. I have a dog and a [wife][krista], but not
+necessarily in that order. I hack on lots of stuff, often with
+[Seattle.rb][s.rb]. I play CTO at [Audiosocket][socket]. I co-founded
+Shady Ventures. I don't get a lot of sleep. I have a history of
+abandoning blogs. If you're paranoid, I have a [public key][pgp].
 
+[krista]: http://twitter.com/kbarnette
   [s.rb]: http://seattlerb.org
 [socket]: http://audiosocket.com
    [pgp]: /personal/jbarnette.txt

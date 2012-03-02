@@ -12,7 +12,7 @@ layout: nil
 
  <author>
    <name>John Barnette</name>
-   <email>jbarnette@gmail.com</email>
+   <email>john@jbarnette.com</email>
  </author>
 
  {% for post in site.posts %}
