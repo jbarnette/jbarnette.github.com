@@ -3,22 +3,20 @@ layout: default
 title: John Barnette
 ---
 
-## Skills
+## 2012 &mdash; Now: GitHub
 
-Software design, strategy, technical project management.
+## 2009 &mdash; 2012: CTO, Audiosocket
 
-## Jobs
+Built the technology strategy, team, and infrastructure from scratch.
 
-### 2009 &mdash; Now: CTO, Audiosocket
-
-### 2009: Lead Software Engineer, AT&T Interactive
+## 2009: Lead Software Engineer, AT&T Interactive
 
 Working directly for the Executive Director of Web Development with a
 small team of Ruby/Rails experts. Spending a lot of time helping ATTi
 solidify coding standards, deployment processes, and general software
 quality.
 
-### 2007 &mdash; 2009: Lead Software Engineer, AdReady
+## 2007 &mdash; 2009: Lead Software Engineer, AdReady
 
 Lead software engineer on a large Rails app, shepherded from 1.x to
 2.x. Extracted a fair amount of work into open source projects,
@@ -27,7 +25,7 @@ and RubyGems (development dependencies). Designed a complex
 subdomain/skinning system and capabilities model. Refactored code that
 would make most engineers run for the hills (and survived).
 
-### 2005 &mdash; 2007: Lead Software Engineer, ODS Software
+## 2005 &mdash; 2007: Lead Software Engineer, ODS Software
 
 Technical and architecture lead on a large CRM/warehouse
 management/financial/ transactional application for the lumber and
@@ -37,7 +35,7 @@ inexperienced development team. The product is now developed using a
 fast, iterative process, with good source control and build systems,
 and a vastly more knowledgeable/better trained development team.
 
-### 2002 &mdash; 2005: Senior Software Engineer, Polycom
+## 2002 &mdash; 2005: Senior Software Engineer, Polycom
 
 Senior architecture and development work on a carrier-class 11 million
 LoC C++/Java application. Thought leader and advocate for agile and
@@ -50,7 +48,7 @@ signiﬁcant company-wide architectural and strategic
 decisions. Championed lightweight, pragmatic development processes,
 defect tracking, and continuous integration.
 
-### 1999 &mdash; 2002: Senior Software Engineer, XOR
+## 1999 &mdash; 2002: Senior Software Engineer, XOR
 
 Client contact (both technical and LOB) during presales and
 architecture/design discussions. Designed and led development of large
@@ -59,18 +57,9 @@ champion of lightweight, pragmatic development process and code
 sharing/modular development. Executive liaison and general technical
 go-to guy.
 
-### 1998 &mdash; 1999: Software Engineer, Exabyte
+## 1998 &mdash; 1999: Software Engineer, Exabyte
 
 Developed high-performace SCSI drivers and software for large-scale
 tape/data storage libraries. Developed remote tape library control
 capabilities and user interface. Developed web management portal for
 information storage and library management.
-
-## Extras
-
-I have a [software engineering blog](http://jbarnette.com). I
-contribute code to Rails, RubyGems, Rubinius, and lots of other
-projects. I keep all my own open source work on
-[GitHub](http://github.com/jbarnette). I've presented at
-[RubyConf](http://rubyconf.org), and I'm an active member of
-[Seattle.rb](http://seattlerb.org).
