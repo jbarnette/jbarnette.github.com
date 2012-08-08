@@ -16,8 +16,8 @@ necessarily in that order. I hack on lots of stuff, often with
 I don't get a lot of sleep. I have a history of neglecting my personal
 site.
 
-    [GitHub]: https://github.com
-      [wife]: http://twitter.com/kbarnette
+[GitHub]: https://github.com
+[wife]: http://twitter.com/kbarnette
 [Seattle.rb]: http://seattlerb.org
 
 ## Awkward Third Person Bio
@@ -34,8 +34,8 @@ I lifted every good visual idea on these pages from [TPW][] or [Khoi
 Vinh][]. Underlying bits are [Jekyll][] and [Markdown][] on [GitHub
 Pages][].
 
-         [TPW]: http://github.com/mojombo
-   [Khoi Vinh]: http://www.subtraction.com
-      [Jekyll]: http://github.com/mojombo/jekyll
-    [Markdown]: http://daringfireball.net/projects/markdown
+[TPW]: http://github.com/mojombo
+[Khoi Vinh]: http://www.subtraction.com
+[Jekyll]: http://github.com/mojombo/jekyll
+[Markdown]: http://daringfireball.net/projects/markdown
 [GitHub Pages]: http://github.com/blog/272-github-pages
