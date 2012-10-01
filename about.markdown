@@ -10,13 +10,12 @@ li.toys { border-left: 0; }
 
 ## About Me
 
-I live in New Orleans. I have a dog and a [wife][], but not
-necessarily in that order. I hack on lots of stuff, often with
-[Seattle.rb][]. I vacation at [GitHub][]. I co-founded Shady Ventures.
-I don't get a lot of sleep. I have a history of neglecting my personal
-site.
+I live in San Francisco and New Orleans. I have a dog and a [wife][],
+but not necessarily in that order. I hack on lots of stuff, sometimes
+with [Seattle.rb][]. I vacation at [GitHub][]. I don't get a lot of
+sleep. I have a history of neglecting my personal site.
 
-[GitHub]: https://github.com
+[GitHub]: https://github.com/jbarnette
 [wife]: http://twitter.com/kbarnette
 [Seattle.rb]: http://seattlerb.org
 
